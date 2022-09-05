@@ -5,7 +5,8 @@ FROM jenkins/jenkins:2.332.3-lts
 RUN /usr/local/bin/install-plugins.sh \ 
     git matrix-auth workflow-aggregator docker-workflow blueocean \ 
     credentials-binding docker-build-publish \
-    pipeline-stage-view pipeline-utility-steps ws-cleanup thinBackup
+    pipeline-stage-view pipeline-utility-steps ws-cleanup thinBackup \
+	chucknorris aws-credentials
 
 # Setting up environment variables for Jenkins admin user
 ENV JENKINS_USER 123
